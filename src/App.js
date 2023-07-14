@@ -27,9 +27,16 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseHandler = (expense) => {
+    console.log('App.js 이다');
+    console.log(expense);
+  } 
+
+
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAdd={addExpenseHandler}/>
       <Expenses expenses={expenses}/>
     </div>
   );
